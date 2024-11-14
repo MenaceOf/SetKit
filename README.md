@@ -20,10 +20,9 @@ Also it contains asking feedback and sharing your app functionality
         .asSTSettings(viewModel: settingsViewModel)
     
     Here is the sample example how to use it
-    ![](docs/codeExample.png)
+![image](docs/codeExample.png)
 
 ## How it works
 
     Here is the example how you can use it
-    ![](docs/example.mp4)
-
+![](docs/example.gif)
