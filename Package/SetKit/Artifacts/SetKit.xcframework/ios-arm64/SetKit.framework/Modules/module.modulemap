@@ -1,0 +1,6 @@
+framework module SetKit {
+  umbrella header "SetKit.h"
+  export *
+
+  module * { export * }
+}

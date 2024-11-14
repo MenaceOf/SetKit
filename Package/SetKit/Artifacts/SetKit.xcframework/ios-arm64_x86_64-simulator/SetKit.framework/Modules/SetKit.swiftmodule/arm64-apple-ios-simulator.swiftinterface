@@ -1,0 +1,97 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name SetKit
+import Combine
+import SafariServices
+@_exported import SetKit
+import StoreKit
+import Swift
+import SwiftUI
+import _Concurrency
+import _StoreKit_SwiftUI
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_Concurrency.MainActor @preconcurrency public struct STShareAppView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var appId: Swift.String
+  @_Concurrency.MainActor @preconcurrency public init(appId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  public typealias Body = @_opaqueReturnTypeOf("$s6SetKit14STShareAppViewV4bodyQrvp", 0) __
+}
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func asSTSettings(viewModel: SetKit.STSettingsViewModel) -> some SwiftUICore.View
+  
+}
+public enum STSettingError : Foundation.LocalizedError {
+  case privacyPolicyURLIsNil
+  case termsOfUseURLIsNil
+  case appIdIsNil
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public static func == (a: SetKit.STSettingError, b: SetKit.STSettingError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_Concurrency.MainActor @preconcurrency public struct SFSafariView : SwiftUI.UIViewControllerRepresentable {
+  @_Concurrency.MainActor @preconcurrency public let url: Foundation.URL
+  @_Concurrency.MainActor @preconcurrency public init(url: Foundation.URL)
+  @_Concurrency.MainActor @preconcurrency public func makeUIViewController(context: SetKit.SFSafariView.Context) -> SafariServices.SFSafariViewController
+  @_Concurrency.MainActor @preconcurrency public func updateUIViewController(_ uiViewController: SafariServices.SFSafariViewController, context: SetKit.SFSafariView.Context)
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  public typealias Body = Swift.Never
+  @available(iOS 13.0, tvOS 13.0, *)
+  @available(watchOS, unavailable)
+  @available(macOS, unavailable)
+  public typealias Coordinator = Swift.Void
+  @available(iOS 13.0, tvOS 13.0, *)
+  @available(watchOS, unavailable)
+  @available(macOS, unavailable)
+  public typealias UIViewControllerType = SafariServices.SFSafariViewController
+}
+extension UIKit.UIApplication {
+  @_Concurrency.MainActor @preconcurrency public static var getScene: UIKit.UIWindowScene? {
+    get
+  }
+}
+public class STSettingsViewModel : Combine.ObservableObject {
+  public var privacyPolicyURL: Foundation.URL?
+  public var termsOfUseURL: Foundation.URL?
+  public var appId: Swift.String?
+  public init(privacyPolicyURL: Foundation.URL? = nil, termsOfUseURL: Foundation.URL? = nil, appId: Swift.String? = nil)
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+extension SetKit.STSettingsViewModel {
+  public func showPrivacyPolicy()
+  public func showTermsOfUse()
+  public func showShareApp()
+  public func showRequestRateApp()
+}
+@_Concurrency.MainActor @preconcurrency public struct ActivityView : SwiftUI.UIViewControllerRepresentable {
+  @_Concurrency.MainActor @preconcurrency public let urls: [Foundation.URL?]
+  @_Concurrency.MainActor @preconcurrency public var activities: [UIKit.UIActivity]?
+  @_Concurrency.MainActor @preconcurrency public init(urls: [Foundation.URL?], activities: [UIKit.UIActivity]? = nil)
+  @_Concurrency.MainActor @preconcurrency public func makeUIViewController(context: SwiftUI.UIViewControllerRepresentableContext<SetKit.ActivityView>) -> UIKit.UIActivityViewController
+  @_Concurrency.MainActor @preconcurrency public func updateUIViewController(_ uiViewController: UIKit.UIActivityViewController, context: SwiftUI.UIViewControllerRepresentableContext<SetKit.ActivityView>)
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  public typealias Body = Swift.Never
+  @available(iOS 13.0, tvOS 13.0, *)
+  @available(watchOS, unavailable)
+  @available(macOS, unavailable)
+  public typealias Coordinator = Swift.Void
+  @available(iOS 13.0, tvOS 13.0, *)
+  @available(watchOS, unavailable)
+  @available(macOS, unavailable)
+  public typealias UIViewControllerType = UIKit.UIActivityViewController
+}
+extension SetKit.STShareAppView : Swift.Sendable {}
+extension SetKit.STSettingError : Swift.Equatable {}
+extension SetKit.STSettingError : Swift.Hashable {}
+extension SetKit.SFSafariView : Swift.Sendable {}
+extension SetKit.ActivityView : Swift.Sendable {}
