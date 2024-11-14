@@ -1,0 +1,15 @@
+{
+  "originHash" : "41c1337777f41f689ef01386bbb82ac3fc26187d60fd9e223557ae69d7a3703e",
+  "pins" : [
+    {
+      "identity" : "setkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MenaceOf/SetKit.git",
+      "state" : {
+        "revision" : "d553bed1e3d6c8136c03851c9ce4bdc3d9fe8826",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}
